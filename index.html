@@ -57,7 +57,7 @@ if(!window.supabase || !window.supabase.createClient) return;
 const sb=window.supabase.createClient(URL,KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
 window.MZCloud.sb=sb; window.MZCloud.configured=true;
 window.MZCloud.authSignIn=async function(password){
-  const email=localStorage.getItem('mz_admin_email')||'admin@drmiladzarei.ir';
+  const email=localStorage.getItem('mz_admin_email')||'iranzarei@gmail.com';
   const r=await sb.auth.signInWithPassword({email,password});
   if(r.error) throw r.error; return r.data;
 };
